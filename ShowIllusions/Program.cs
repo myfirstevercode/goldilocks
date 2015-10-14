@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Ensage;
+using SharpDX;
 
 namespace Show_illusions
 {
@@ -10,12 +11,12 @@ namespace Show_illusions
 
         #region Members
 
+        
         private static bool _loaded;
         private static Hero _me;
         private static Player _player;
-        public static Dictionary<Unit, ParticleEffect> Effects { get; } = new Dictionary<Unit, ParticleEffect>();
+        private static readonly Dictionary<Unit, ParticleEffect> Effects = new Dictionary<Unit, ParticleEffect>();
         private static readonly Dictionary<Unit, ParticleEffect> Visible = new Dictionary<Unit, ParticleEffect>();
-
         #endregion
 
 
